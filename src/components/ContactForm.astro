@@ -1,0 +1,175 @@
+---
+/**
+ * @package IDEALORO-PREVIEW — CTA Commerciale Software House
+ * @author Padmin D. Curtis (AI Partner OS3.0) for Fabio Cherici
+ * @version 2.0.0 (FlorenceEGI — IDEALORO-PREVIEW)
+ * @date 2026-05-11
+ * @purpose CTA commerciale Magicsoft 2.0: headline forte, form lead minimo,
+ *          POST a /mail.php con honeypot + rate-limit + GDPR checkbox.
+ */
+import { type Locale } from '@i18n/index';
+
+export interface Props { locale: Locale; }
+const { locale } = Astro.props;
+
+const buildNonce = Math.random().toString(36).slice(2, 14);
+
+const copy = locale === 'it' ? {
+  headline: "Questo sito l'abbiamo costruito in 5 giorni.",
+  headline2: "Il tuo potremmo consegnarlo in 10.",
+  subheadline: "Usiamo un'architettura proprietaria che ci permette di produrre siti enterprise-grade in giorni, non in mesi.",
+  name: "Nome",
+  name_ph: "Il tuo nome",
+  email: "Email",
+  email_ph: "nome@azienda.it",
+  phone: "Telefono",
+  phone_ph: "+39 333 1234567",
+  need: "Di cosa hai bisogno?",
+  need_ph: "Es. sito aziendale, e-commerce, web app, restyling...",
+  privacy: "Acconsento al trattamento dei dati personali ai sensi del GDPR.",
+  privacy_link: "Privacy Policy",
+  submit: "Parliamone — zero impegno",
+  sending: "Invio in corso...",
+  success_title: "Messaggio ricevuto!",
+  success_text: "Ti ricontattiamo entro 24 ore. Se hai fretta, scrivici su WhatsApp.",
+  error_title: "Errore di invio",
+  error_text: "Riprova tra qualche minuto.",
+} : {
+  headline: "We built this site in 5 days.",
+  headline2: "Yours? We could deliver it in 10.",
+  subheadline: "We use a proprietary architecture that lets us produce enterprise-grade sites in days, not months.",
+  name: "Name",
+  name_ph: "Your name",
+  email: "Email",
+  email_ph: "name@company.com",
+  phone: "Phone",
+  phone_ph: "+39 333 1234567",
+  need: "What do you need?",
+  need_ph: "E.g. company website, e-commerce, web app, redesign...",
+  privacy: "I consent to data processing under GDPR.",
+  privacy_link: "Privacy Policy",
+  submit: "Let's talk — zero commitment",
+  sending: "Sending...",
+  success_title: "Message received!",
+  success_text: "We'll get back to you within 24 hours.",
+  error_title: "Sending error",
+  error_text: "Please try again in a few minutes.",
+};
+---
+<section id="cta" class="max-w-3xl mx-auto">
+  <div class="mb-10 text-center">
+    <h2 class="serif text-4xl md:text-5xl lg:text-6xl text-ink-900 mb-2 leading-tight">{copy.headline}</h2>
+    <p class="serif text-3xl md:text-4xl lg:text-5xl text-gold-700 font-semibold leading-tight">{copy.headline2}</p>
+    <p class="text-ink-600 text-lg md:text-xl mt-6 max-w-2xl mx-auto leading-relaxed">{copy.subheadline}</p>
+  </div>
+
+  <form
+    action="/mail.php"
+    method="POST"
+    class="card-lux p-6 md:p-10 space-y-5"
+    novalidate
+    data-contact-form
+    data-sending-text={copy.sending}
+    data-success-title={copy.success_title}
+    data-success-text={copy.success_text}
+    data-error-title={copy.error_title}
+    data-error-text={copy.error_text}
+    aria-label={copy.headline}
+  >
+    <input type="hidden" name="_nonce" value={buildNonce} />
+    <input type="hidden" name="_locale" value={locale} />
+    <input type="hidden" name="_source" value="cta-magicsoft" />
+    <!-- honeypot -->
+    <div class="absolute -left-[9999px] w-px h-px overflow-hidden" aria-hidden="true">
+      <label>Website <input type="text" name="website" tabindex="-1" autocomplete="off" /></label>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-5">
+      <div>
+        <label for="f-name" class="block text-sm font-semibold text-ink-800 mb-2">{copy.name} *</label>
+        <input id="f-name" name="name" type="text" required minlength="2" maxlength="80"
+          placeholder={copy.name_ph}
+          class="w-full px-4 py-3 bg-ivory-50 border border-ink-200 rounded-sm focus:border-gold-500 focus:bg-white outline-none transition-colors" />
+      </div>
+      <div>
+        <label for="f-phone" class="block text-sm font-semibold text-ink-800 mb-2">{copy.phone}</label>
+        <input id="f-phone" name="phone" type="tel" maxlength="25"
+          placeholder={copy.phone_ph}
+          class="w-full px-4 py-3 bg-ivory-50 border border-ink-200 rounded-sm focus:border-gold-500 focus:bg-white outline-none transition-colors tabular" />
+      </div>
+    </div>
+
+    <div>
+      <label for="f-email" class="block text-sm font-semibold text-ink-800 mb-2">{copy.email} *</label>
+      <input id="f-email" name="email" type="email" required maxlength="120"
+        placeholder={copy.email_ph}
+        class="w-full px-4 py-3 bg-ivory-50 border border-ink-200 rounded-sm focus:border-gold-500 focus:bg-white outline-none transition-colors" />
+    </div>
+
+    <div>
+      <label for="f-need" class="block text-sm font-semibold text-ink-800 mb-2">{copy.need}</label>
+      <textarea id="f-need" name="message" rows="3" maxlength="1000"
+        placeholder={copy.need_ph}
+        class="w-full px-4 py-3 bg-ivory-50 border border-ink-200 rounded-sm focus:border-gold-500 focus:bg-white outline-none transition-colors resize-y"></textarea>
+    </div>
+
+    <label class="flex items-start gap-3 text-sm text-ink-600">
+      <input type="checkbox" name="privacy" required class="mt-1 w-4 h-4 accent-gold-500" />
+      <span>
+        {copy.privacy}
+        <a href={locale === 'it' ? '/privacy' : '/en/privacy'} class="text-gold-700 lux-link">({copy.privacy_link})</a>
+      </span>
+    </label>
+
+    <div class="pt-2">
+      <button type="submit" class="btn-gold w-full text-lg py-4" data-submit-btn>
+        <span data-submit-text>{copy.submit}</span>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </button>
+    </div>
+
+    <div data-form-status role="status" aria-live="polite" class="hidden"></div>
+  </form>
+</section>
+
+<script is:inline>
+(function() {
+  const form = document.querySelector('[data-contact-form]');
+  if (!form) return;
+  const statusEl = form.querySelector('[data-form-status]');
+  const btn = form.querySelector('[data-submit-btn]');
+  const btnText = form.querySelector('[data-submit-text]');
+  const defaultText = btnText ? btnText.textContent : '';
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    if (!form.checkValidity()) { form.reportValidity(); return; }
+    if (form.querySelector('[name=website]').value) return;
+
+    if (btnText) btnText.textContent = form.getAttribute('data-sending-text') || 'Invio...';
+    if (btn) btn.setAttribute('disabled', 'true');
+
+    try {
+      const res = await fetch('/mail.php', {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'X-Requested-With': 'XMLHttpRequest' },
+      });
+      const json = await res.json().catch(() => ({ ok: res.ok }));
+      if (res.ok && json.ok !== false) {
+        form.reset();
+        statusEl.className = 'p-4 rounded-sm bg-green-50 border border-green-200 text-green-900 text-sm';
+        statusEl.innerHTML = '<strong class="block mb-1">' + (form.dataset.successTitle || 'OK') + '</strong>' + (form.dataset.successText || '');
+      } else {
+        throw new Error(json.error || 'server');
+      }
+    } catch (err) {
+      statusEl.className = 'p-4 rounded-sm bg-red-50 border border-red-200 text-red-900 text-sm';
+      statusEl.innerHTML = '<strong class="block mb-1">' + (form.dataset.errorTitle || 'Error') + '</strong>' + (form.dataset.errorText || '');
+    } finally {
+      if (btnText) btnText.textContent = defaultText;
+      if (btn) btn.removeAttribute('disabled');
+    }
+  });
+})();
+</script>

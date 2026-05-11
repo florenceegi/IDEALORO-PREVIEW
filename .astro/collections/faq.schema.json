@@ -1,0 +1,53 @@
+{
+  "$ref": "#/definitions/faq",
+  "definitions": {
+    "faq": {
+      "type": "object",
+      "properties": {
+        "order": {
+          "type": "number"
+        },
+        "category": {
+          "type": "string",
+          "enum": [
+            "generale",
+            "vendita",
+            "acquisto",
+            "perizie",
+            "gioielleria",
+            "legale"
+          ]
+        },
+        "question_it": {
+          "type": "string",
+          "minLength": 10
+        },
+        "answer_it": {
+          "type": "string",
+          "minLength": 30
+        },
+        "question_en": {
+          "type": "string",
+          "minLength": 10
+        },
+        "answer_en": {
+          "type": "string",
+          "minLength": 30
+        },
+        "$schema": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "order",
+        "category",
+        "question_it",
+        "answer_it",
+        "question_en",
+        "answer_en"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}

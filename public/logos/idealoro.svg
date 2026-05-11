@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 60" fill="none">
+  <rect width="240" height="60" rx="4" fill="#1a1a1a"/>
+  <text x="120" y="38" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="28" font-weight="700" fill="#c9a84c" letter-spacing="3">
+    IdealOro
+  </text>
+  <line x1="30" y1="50" x2="210" y2="50" stroke="#c9a84c" stroke-width="0.5" opacity="0.4"/>
+</svg>

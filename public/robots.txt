@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /
+
+# Demo template — noindex, no crawling
+# preview.florenceegi.com
