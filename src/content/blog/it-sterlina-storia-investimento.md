@@ -40,6 +40,6 @@ Come tutto l'oro da investimento certificato (direttiva UE 98/80/CE), la Sterlin
 
 ## Acquistarle a Firenze
 
-Da IdealOro trovi Sterline verificate, con quotazione aggiornata ogni giorno sul London Gold Fixing. Pagamento in contanti o bonifico tracciato, autenticità dimostrabile, tracciabilità OAM piena. Nessuna sorpresa sul prezzo: **quello che vedi è quello che paghi**.
+Da IdealOro trovi Sterline verificate, con quotazione aggiornata ogni giorno sul London Gold Fixing. Pagamento in contanti o bonifico tracciato, autenticità dimostrabile, tracciabilità piena. Nessuna sorpresa sul prezzo: **quello che vedi è quello che paghi**.
 
 [Prenota un appuntamento](/contatti) o chiama il negozio allo 055 2335573 per verificare la disponibilità delle annate che ti interessano.

@@ -28,7 +28,7 @@ Every morning at 10:30 (and 15:00 UK time) the **London Gold Fixing** publishes 
 
 ## 4. Written offer
 
-We present a **transparent document** with: weight, purity, daily quote, commercial margin (typically between 15 and 20%), final value. No pressure to sign. If you accept, we pay by traceable bank transfer the same day — OAM regulatory requirement. If you don't, the piece goes back to you untouched.
+We present a **transparent document** with: weight, purity, daily quote, commercial margin (typically between 15 and 20%), final value. No pressure to sign. If you accept, we pay by traceable bank transfer the same day — AML regulatory requirement. If you don't, the piece goes back to you untouched.
 
 ## What to bring to the store
 
@@ -39,6 +39,6 @@ We present a **transparent document** with: weight, purity, daily quote, commerc
 
 ## Why appraise with us
 
-We are **registered with OAM no. OCO00** and authorised by the **Bank of Italy no. 0000000**. This means: full anti-money-laundering compliance, mandatory traceability of every transaction, traceable payment (never cash above AML thresholds), periodic checks. We've worked this way since 2008 in Via Esempio, Florence.
+We operate in **full anti-money-laundering compliance**: mandatory traceability of every transaction, traceable payment (never cash above AML thresholds), periodic checks. We've worked this way since 2008 in Via Esempio, Florence.
 
 [Book an appointment](/en/contact) or walk in — appraisal is always free, even if you decide not to sell.

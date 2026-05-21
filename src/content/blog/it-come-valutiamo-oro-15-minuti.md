@@ -28,7 +28,7 @@ Ogni mattina alle 10:30 (e alle 15:00 UK) il **London Gold Fixing** pubblica il 
 
 ## 4. Offerta scritta
 
-Ti presentiamo un **documento trasparente** con: peso, titolo, quotazione del giorno, margine commerciale (tipicamente tra il 15 e il 20%), valore finale. Nessuna pressione a firmare. Se accetti, paghiamo per bonifico tracciato in giornata — obbligo normativo OAM. Se non accetti, il pezzo torna a te integro.
+Ti presentiamo un **documento trasparente** con: peso, titolo, quotazione del giorno, margine commerciale (tipicamente tra il 15 e il 20%), valore finale. Nessuna pressione a firmare. Se accetti, paghiamo per bonifico tracciato in giornata — obbligo normativo antiriciclaggio. Se non accetti, il pezzo torna a te integro.
 
 ## Cosa portare in negozio
 
@@ -39,6 +39,6 @@ Ti presentiamo un **documento trasparente** con: peso, titolo, quotazione del gi
 
 ## Perché farlo da noi
 
-Siamo **iscritti OAM n. OCO00** e autorizzati da **Banca d'Italia n. 0000000**. Questo significa: antiriciclaggio pieno, tracciabilità obbligatoria di ogni transazione, pagamento tracciato (mai cash sopra soglie AML), controlli periodici. Lavoriamo così dal 2008 in Via Esempio a Firenze.
+Operiamo in **piena conformità antiriciclaggio**: tracciabilità obbligatoria di ogni transazione, pagamento tracciato (mai contanti sopra soglie AML), controlli periodici. Lavoriamo così dal 2008 in Via Esempio a Firenze.
 
 [Prenota un appuntamento](/contatti) o passa in negozio — valutazione sempre gratuita, anche se poi decidi di non vendere.

@@ -40,6 +40,6 @@ Like all certified investment gold (EU directive 98/80/EC), the Gold Sovereign i
 
 ## Buying them in Florence
 
-At IdealOro you'll find verified Sovereigns priced every day on the London Gold Fixing. Payment in cash or traceable bank transfer, demonstrable authenticity, full OAM traceability. No surprises on price: **what you see is what you pay**.
+At IdealOro you'll find verified Sovereigns priced every day on the London Gold Fixing. Payment in cash or traceable bank transfer, demonstrable authenticity, full traceability. No surprises on price: **what you see is what you pay**.
 
 [Book an appointment](/en/contact) or call the store at +39 055 2335573 to check availability for the vintages you are after.
